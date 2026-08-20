@@ -1,0 +1,8 @@
+# Claude Code parses SKILL.md's YAML frontmatter; CRLF line endings degrade that
+# parse and the skill loses its description (it falls back to the H1), which
+# silently costs trigger reliability. Windows git defaults to core.autocrlf=true
+# and converts on checkout, so force LF for everything text here.
+* text=auto eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
